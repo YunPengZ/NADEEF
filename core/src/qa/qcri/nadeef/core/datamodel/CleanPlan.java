@@ -192,7 +192,7 @@ public class CleanPlan {
                                 file,
                                 targetTable,
                                 NadeefConfiguration.getAlwaysOverrideTable()
-                            );
+                            );//数据转换过程出错
                         copiedTables.put(targetTable, tableName);
                     }
                     targetTable = copiedTables.get(targetTable);

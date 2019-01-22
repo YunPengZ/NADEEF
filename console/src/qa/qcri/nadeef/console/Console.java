@@ -172,7 +172,7 @@ public class Console {
                     if (tokens[0].equalsIgnoreCase("exit")) {
                         break;
                     } else if (tokens[0].equalsIgnoreCase("load")) {
-                        load(line);
+                       // load(line);
                     } else if (tokens[0].equalsIgnoreCase("list")) {
                         list();
                     } else if (tokens[0].equalsIgnoreCase("help")) {

@@ -1,12 +1,16 @@
 {
     "source" : {
-        "type" : "csv",
-        "file" : ["./examples/hospital.csv"]
+		"url" : "localhost/unittest",
+        "username" : "postgres",
+        "password" : "root",
+		"type" : "postgres"
     },
     "rule" : [
         {
+			"table":["tb_hospital"],
+			"target":["tb_hospital_copy"],
             "type" : "fd",
-            "value" : ["zipcode | city, state"]
+            "value" : ["ZIPCode | City"]
         }
     ]
 }

@@ -201,7 +201,7 @@ public abstract class SQLDialectBase {
      * @param content table description.
      * @return SQL statement.
      */
-    public String createTableFromCSV(String tableName, String content) {
+    public String createTableFromCSV(String tableName, String content) {//对空值情况做特殊处理
         STGroupFile template = Preconditions.checkNotNull(getTemplate());
         ST st = template.getInstanceOf("CreateTableFromCSV");
         st.add("tableName", tableName.toUpperCase());

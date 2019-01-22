@@ -1,0 +1,17 @@
+{
+    "source" : {
+		"url" : "localhost/unittest",
+        "username" : "postgres",
+        "password" : "root",
+		"type" : "postgres"
+    },
+    "rule" : [
+        {
+			"table":["tb_hospital","tb_hospital"],
+			#"target":["tb_hospital_copy"],
+            "type" : "dc",
+            #"value" : ["ZIPCode | City, State"]
+			"value" : ["not(t1.ZIPCODE=t2.ZIPCODE&t1.CITY!=t2.CITY)"]
+        }
+    ]
+}

@@ -157,7 +157,7 @@ public class CSVTools {
         } catch (Exception ex) {
             logger.error("Reading CSV file header failed.", ex);
         }
-        return dump(dbConfig, dialectManager, file, tableName, header, overwrite);
+        return dump(dbConfig, dialectManager, file, tableName, header, overwrite);//错误1
     }
 
     /**
@@ -210,7 +210,7 @@ public class CSVTools {
 
                     sql = dialectManager.createTableFromCSV(fullTableName, schema);
                     logger.fine(sql);
-                    stat.execute(sql);
+                    stat.execute(sql);//
                     logger.info("Successfully created table " + fullTableName);
                 } finally {
                     if (stat != null) {
